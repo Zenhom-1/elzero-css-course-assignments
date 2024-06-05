@@ -1,0 +1,59 @@
+.T_1 {
+  width: 600px;
+  background-color: #eee;
+  padding: 20px;
+  margin: auto;
+  text-transform: capitalize;
+  font-size: 60px;
+  text-align: center;
+  text-shadow:  1px 2px 0px brown,
+                2px 3px 0px blue,
+                3px 4px 0px purple;
+} 
+.one,
+.two,
+.three {
+  width: 400px;
+  background-color: #eee;
+  padding: 20px;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+.one {
+  text-transform: uppercase;
+}
+.two {
+  text-transform: capitalize;
+}
+.three {
+  text-transform: lowercase;
+}
+.T_33,
+.T_44,
+.T_55 {
+  width: 400px;
+  background-color: #ccc;
+  padding: 20px;
+  margin:20px auto;
+  font-size: 19px;
+}
+.T_55 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.T_4 {
+  display: block;
+  background-color: #1ca396;
+  color: white;
+  padding: 20px;
+  margin:20px auto;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  width: fit-content;
+  border-bottom: 10px solid #134c47;
+  text-transform: capitalize;
+}

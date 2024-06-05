@@ -1,0 +1,66 @@
+@media print {
+  .assign-one {
+    font-size: 40px;
+  }
+}
+hr {
+  margin: 30px auto;
+}
+.assign-two,
+.assign-three {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.assign-two div ,
+.assign-three div{
+  background-color: #eee;
+  width: 200px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+@media (max-width: 500px) {
+  .assign-two div, 
+  .assign-three div {
+    width: calc(100% - 10px);
+  }
+  .assign-two div h3,
+  .assign-three div h3 {
+    color: black;
+  }
+}
+@media (min-width: 501px) and ((max-width: 1000px)) {
+  .assign-two div {
+    width: calc(50% - 10px);
+  }
+  .assign-two div h3,
+  .assign-three div h3 {
+    color: #f85454;
+  }
+  .assign-three .one {
+    width: calc(100% - 10px);
+  }
+  .assign-three .two,
+  .assign-three .three,
+  .assign-three .four {
+    width: 32.3%;
+  }
+}
+@media (min-width: 1001px) {
+  .assign-two div {
+    width: calc(25% - 10px);
+  }
+  .assign-two div h3, 
+  .assign-three div h3 {
+    color: #0b998c;
+  }
+  .assign-three .one,
+  .assign-three .four {
+    width: calc(100% - 10px);
+  }
+  .assign-three .two,
+  .assign-three .three {
+    width: calc(50% - 10px);
+  }
+}

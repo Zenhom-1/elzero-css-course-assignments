@@ -1,0 +1,37 @@
+.Shape div {
+  display: inline-block;
+  background-color: #ddd;
+  outline: 10px solid black;
+  padding: 50px 80px;
+  margin-top: 30px;
+  margin-left: 170px;
+  font-size: xx-large;
+}
+.Shape_1 {
+  border: 10px solid red;
+}
+.Shape_2 {
+  border-width: 10px;
+  border-style: solid;
+  border-color: blue green;
+}
+.Shape_3 {
+  border-width: 10px;
+  border-style: dashed;
+  border-color: red green blue yellow;
+}
+.T_11 {
+  font-size: xx-large;
+  padding: 30px;
+  margin-left: 60px;
+  margin-bottom: 110px;
+  background-color: #ddd;
+  border-left: 10px solid pink;
+}
+.T_22 {
+  font-size: xx-large;
+  padding: 30px;
+  margin-left: 60px;
+  background-color: #ddd;
+  border-left: 10px solid green;
+}

@@ -1,0 +1,33 @@
+* {
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+hr {
+  margin: 20px auto;
+}
+.T1 div[class="main red"] {
+  color: red;
+}
+.T2 .parent > div:nth-child(2) {
+  color: red;
+}
+.T3 .parent > div:only-of-type {
+  color: red;
+}
+.T4 > div[title]:not(.no-need) {
+  color: red;
+}
+.T5  div:nth-child(2) div {
+  color: red;
+}
+.T6 div:not(.no-need) div:nth-last-of-type(2) {
+  color: red;
+}
+.T7 div:first-child div:nth-of-type(2) {
+  color: red;
+}
+.T8 :not(:first-child , h3 , :last-child) {
+  color: red;
+}

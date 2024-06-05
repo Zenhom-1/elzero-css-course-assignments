@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.T1 {
+  width: 50px;
+  height: 50px;
+  margin: 50px auto;
+  border-radius: 50%;
+  border: 5px solid #ee1b55;
+  border-left-color: transparent;
+  position: relative;
+  animation-name: spin1;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+.T1:hover {
+  animation-play-state: paused;
+}
+.T1::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 15px);
+  height: calc(100% + 15px);
+  border-radius: 50%;
+  border: 5px solid #1e93d8;
+  border-right-color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+.T1::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  border-radius: 50%;
+  border: 5px solid #fca000;
+  border-bottom-color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+@keyframes spin1 {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.T2 {
+  width: 50px;
+  height: 50px;
+  margin: 50px auto;
+  border:5px solid #1e93d8;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  position: relative;
+  animation-name: spin2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+.T2::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 15px);
+  height: calc(100% + 15px);
+  border: 5px solid #fca000;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  top: -13px;
+  left: -13px;
+  animation-name: spin2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+.T2::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  border: 5px solid black;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  top: -20px;
+  left: -20px;
+  animation-name: spin2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+@keyframes spin2 {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.T2:hover, .T2:hover:before, .T2:hover:after {
+  animation-play-state: running;
+}
+span {
+  width: 50px;
+  height: 50px;
+  margin: 50px auto;
+  border: 5px solid black;
+  display: block;
+  border-radius: 50%;
+  border-left-color: transparent;
+  animation-name: spin3;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  background-color: #ccc;
+}
+@keyframes spin3 {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.parent {
+  width: 500px;
+  height: 400px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 240px);
+  grid-template-rows: auto;
+  gap: 15px 15px;
+  position: relative;
+}
+.E div,
+.L div{
+  background-color: #363234;
+}
+.E,
+.L {
+  display: grid;
+  grid-template-columns: repeat(4,50px);
+  grid-auto-rows: repeat(7,50px);
+}
+.one {
+  grid-area: 1 / 1 / 2 / span 4;
+}
+.two {
+  grid-area: 2 / 1 / span 2 / 2;
+}
+.three {
+  grid-area: 4 / 1 / 5 / span 4;
+}
+.four {
+  grid-area: 5 / 1 / span 2 / 2;
+}
+.five {
+  grid-area: 7 / 1 / 8 / span 4;
+}
+.frist {
+  grid-area: 1 / 1 / span 6 / 2;
+}
+.second {
+  grid-area: 2 / 1 / span 6 / 2;
+}
+.third {
+  grid-area: 7 / 1 / 8 / span 4;
+}
+.parent::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #fca000;
+  left: 150px;
+  top: 8px;
+  animation-name: move-e;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+}
+.parent::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #fca000;
+  right: 55px;
+  bottom: 8px;
+  opacity: 0;
+  animation-name: move-l;
+  animation-duration: 3s;
+  animation-delay: 6s;
+  animation-timing-function: linear;
+}
+@keyframes move-e {
+  0% {
+    left: 150px;
+    top: 8px;
+  }
+  10% {
+    top: 8px;
+    left: 5px;
+  }
+  20% {
+    top: 175px;
+    left: 5px;
+  }
+  30% {
+    top: 175px;
+    left: 150px;
+  }
+  40% {
+    top: 175px;
+    left: 5px;
+  }
+  50% {
+    top: 350px;
+    left: 5px;
+  }
+  60% {
+    top: 350px;
+    left: 150px;
+  }
+  70% {
+    top: 350px;
+    left: 5px;
+  }
+  80% {
+    top: 8px;
+    left: 5px;
+  }
+  90% {
+    left: 150px;
+    top: 8px;
+  }
+  100% {
+    left: 150px;
+    top: 8px;
+  }
+}
+@keyframes move-l {
+  0%{
+    right: 55px;
+    bottom: 8px;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    right: 200px;
+    bottom: 8px;
+    opacity: 1;
+  }
+  90% {
+    right: 200px;
+    bottom: 350px;
+    opacity: 1;
+  }
+  100% {
+    right: 200px;
+    bottom: 350px;
+    opacity: 0;
+  }
+}
